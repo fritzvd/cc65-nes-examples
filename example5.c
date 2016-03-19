@@ -1,7 +1,7 @@
 //this example code unpacks a RLE'd nametable into the VRAM
 //you can create the source data using NES Screen Tool
 
-#include "neslib.h"
+#include "base/neslib.h"
 
 #include "test.h"	//packed nametable data
 
@@ -14,7 +14,7 @@ void main(void)
 
 	pal_bg(palette);//set background palette from an array
 
-	unrle_vram(test,0x2000);//unpack nametable into the VRAM
+	vram_unrle(test);//unpack nametable into the VRAM
 
 	ppu_on_all();//enable rendering
 

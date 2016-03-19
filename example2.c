@@ -1,7 +1,7 @@
 //this example shows how to set up a palette and use 8x8 HW sprites
 //also shows how fast (or slow) C code is
 
-#include "neslib.h"
+#include "base/neslib.h"
 
 
 //general purpose vars
@@ -62,12 +62,12 @@ void main(void)
 		ball_dy[i]=j&2?-spr:spr;
 	}
 
-	
+
 	//now the main loop
 
 	while(1)
 	{
-		ppu_waitnmi();//wait for next TV frame
+		ppu_wait_nmi();//wait for next TV frame
 
 		spr=0;
 

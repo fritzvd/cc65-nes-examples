@@ -2,7 +2,7 @@
 //and how to use nametable update system that allows to modify nametable
 //while rendering is enabled
 
-#include "neslib.h"
+#include "base/neslib.h"
 
 
 //these macro are needed to simplify defining update list constants
@@ -41,7 +41,7 @@ void main(void)
 	pal_col(17,0x30);//white color for sprite
 
 	memcpy(list,list_init,sizeof(list_init));
-	set_vram_update(6,list);
+	set_vram_update(list);
 
 	ppu_on_all();//enable rendering
 
@@ -52,7 +52,7 @@ void main(void)
 
 	while(1)
 	{
-		ppu_waitnmi();//wait for next TV frame
+		ppu_wait_nmi();//wait for next TV frame
 
 		oam_spr(x,y,0x41,0,0);//put sprite
 

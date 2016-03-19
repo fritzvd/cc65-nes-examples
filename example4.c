@@ -1,7 +1,7 @@
 //this example shows metasprite use, two pads polling,
 //and simple collision detection that changes palette
 
-#include "neslib.h"
+#include "base/neslib.h"
 
 
 //variables
@@ -17,7 +17,7 @@ static unsigned char cat_x[2];
 static unsigned char cat_y[2];
 
 
-//first player metasprite, data structure explained in neslib.h
+//first player metasprite, data structure explained in base/neslibh
 
 const unsigned char metaCat1[]={
 	0,	0,	0x50,	0,
@@ -69,7 +69,7 @@ void main(void)
 
 	while(1)
 	{
-		ppu_waitnmi();//wait for next TV frame
+		ppu_wait_nmi();//wait for next TV frame
 
 		//flashing color for touch
 		

@@ -1,7 +1,7 @@
 //this example code shows how to put some text in nametable
 //it assumes that you have ASCII-encoded font in the CHR tiles $00-$3f
 
-#include "neslib.h"
+#include "base/neslib.h"
 
 
 //this macro is used remove need of calculation of the nametable address in runtime
